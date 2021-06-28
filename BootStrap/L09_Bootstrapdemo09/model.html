@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模态框</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+<body>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        启动模态框
+    </button>
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>&times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">modal 标题</h4>
+                </div>
+                <!-- 主体 -->
+                <div class="modal-body">
+                    内容区域
+                </div>
+                <!-- 底部 -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    //$("#myModal").modal("show");
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徽章</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+<body>
+    <!-- 巨幕 -->
+    <div class="jumbotron">
+       <div class="container">
+        <h1>BootStrap</h1>
+        <p>欢迎来到极客学院，希望能学到更多知识！</p>
+        <p><a href="#" class="btn btn-info" role="button">learn more</a></p>
+       </div>
+    </div>
+    <div class="container">
+        <a href="#">短信消息<span class="badge">40</span></a>
+        <button type="button" class="btn btn-success">Messages<span class="badge">32</span></button>
+    </div>
+    <ul class="nav nav-pills" role="rablist" id="myul">
+        <li class="active" role="presentation">
+            <a href="#">home<span class="badge">10</span></a>
+        </li>
+        <li role="presentation">
+            <a href="#">Profile<span class="badge">120</span></a>
+        </li>
+        <li role="presentation">
+            <a href="#">Messages<span class="badge">170</span></a>
+        </li>
+    </ul>
+</body>
+<script>
+    $("#myul a").click(function(e){
+        e.preventDefault();
+        $(this).tab("show");
+    });
+</script>
+</html>

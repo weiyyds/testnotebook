@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			[v-cloak]{display:none}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div id="" v-cloak>
+				<!-- 插值表达式 -->
+				{{num}}  
+			</div>
+			<button type="button" v-on:click="num++">点击</button>
+			<button type="button" v-on:click="handel1">点击1</button>
+			<button type="button" @click="handel2(123,345,$event)">点击2</button>
+		</div>
+		<script src="js/vue.min.js"></script>
+		<script type="text/javascript">
+			/**
+			 * 结论：
+			 * 事件绑定-参数传递
+			 * 1.如果事件直接绑定函数名称，那么默认会传递事件对象作为事件函数的第一个参数
+			 * 2.如果事件绑定函数调用，那么事件对象必须作为最后一个参数显示传递，并且事件对象的名称必须是$event
+			 */
+			var vm=new Vue({
+				// el：表示元素的挂载位置
+				el:'#app',
+				data:{
+					num:0
+				},
+				methods:{
+					handel2:function(p,p1,event){
+						console.log(p,p1);
+						console.log(event.target.innerHTML)
+						//这里的this是vue的实例对象vm
+						this.num++;
+					},
+					handel1:function(event){
+						console.log(event.target.innerHTML);
+					}
+					
+				}
+			})
+			/* 
+			Vue的使用步骤：
+			 1.需要提供标签用于填充数据
+			 2.引入vue.js库文件
+			 3.可以使用vue语法做功能
+			 4.把vue提供的数据填充到标签中
+			 */
+		</script>
+	</body>
+</html>

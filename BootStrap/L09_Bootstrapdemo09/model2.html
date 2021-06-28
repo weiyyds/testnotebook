@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模态框</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+<body>
+  <button type="button" id="myLargeModalLabel" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+      启动大Modal
+  </button>
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                这是一个大的模态框！
+            </div>
+        </div>
+  </div>
+  <!--小模态框 -->
+  <button type="button" id="myLargeModalLabel2" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">
+    启动小Modal
+</button>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              这是一个小的模态框！
+          </div>
+      </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+    Open modal for @mdao
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-success close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">New Message</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="contrl-label">Recipient</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+    <script>
+        $("#exampleModal").on("show.bs.modal",function(event){
+            var button=$(event.relatedTarget)
+            var recipient=button.data("whatever")
+            var modal=$(this);
+            modal.find(".modal-title").text("New Message to"+recipient);
+            modal.find(".modal-body input").val(recipient);
+        })
+    </script>
+</html>

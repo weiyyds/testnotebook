@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			[v-cloak]{display:none}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div id="" v-cloak>
+				<!-- 插值表达式 -->
+				{{msg}}   
+			</div>
+			<div>
+				<input type="text" name="" id="" v-model="msg">
+			</div>
+		</div>
+		<script src="js/vue.min.js"></script>
+		<script type="text/javascript">
+			var vm=new Vue({
+				// el：表示元素的挂载位置
+				el:'#app',
+				data:{
+					msg:'Hello Vue',
+				}
+			})
+			/* 
+			Vue的使用步骤：
+			 1.需要提供标签用于填充数据
+			 2.引入vue.js库文件
+			 3.可以使用vue语法做功能
+			 4.把vue提供的数据填充到标签中
+			 */
+		</script>
+	</body>
+</html>

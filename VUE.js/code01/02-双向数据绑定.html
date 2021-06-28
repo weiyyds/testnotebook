@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			[v-cloak]{display:none}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div id="" v-cloak>
+				<!-- 插值表达式 -->
+				{{msg}}   
+			</div>
+			<div id="" v-text="msg">
+				
+			</div>
+			<div id="" v-html="msg1">
+				
+			</div>
+			<div v-pre>
+				<!--不执行vue的编译，直接执行普通编译-->
+				{{msg}}
+			</div>
+			<div v-once>{{info}}</div>
+		</div>
+		<script src="js/vue.min.js"></script>
+		<script type="text/javascript">
+			/**
+			 * v-cloak指令的用法
+			 * 1.提供样式
+			 * [v-cloak]{display:none}
+			 * 2.在差值表达式所在的标签中添加v-cloak指令
+			 */
+			var vm=new Vue({
+				// el：表示元素的挂载位置
+				el:'#app',
+				data:{
+					msg:'Hello Vue',
+					msg1:'<h3>我是msg1</h3>',
+					info:'你好！'
+				}
+			})
+			/* 
+			Vue的使用步骤：
+			 1.需要提供标签用于填充数据
+			 2.引入vue.js库文件
+			 3.可以使用vue语法做功能
+			 4.把vue提供的数据填充到标签中
+			 */
+		</script>
+	</body>
+</html>
