@@ -1,5 +1,21 @@
 ## Git学习
 
+### 获取脚本
+
+> ## 使用quicker 编写脚本进行一键初始化和远程同步，脚本基于以下命令
+>
+> 下面这个脚本一键上传文件到远程仓库
+>
+> https://getquicker.net/Sharedaction?code=bf3da905-e641-4bc8-668d-08d841787f87&fromMyShare=true
+>
+> 如果要进行重新设置,按住ctrl再运行该活动，就会进入初始化设置状态重新设置ssh链接和选择要上传的文件夹
+>
+> 下面这个脚本一键获取ssh公钥
+>
+> https://getquicker.net/Sharedaction?code=d49471e9-8176-4f5a-d1c3-08d8423ccd55&fromMyShare=true
+>
+> b站视频操作：https://www.bilibili.com/video/BV14f4y1Q7eu?t=523
+
 ### 版本控制
 
 版本迭代
